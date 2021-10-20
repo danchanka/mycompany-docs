@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'MyCompany documentation',
   tagline: 'MyCompany',
-  url: 'https://danchanka.github.io/mycompany-docs',
-  baseUrl: '/',
+  url: 'https://danchanka.github.io',
+  baseUrl: '/mycompany-docs/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'danchanka', // Usually your GitHub org/user name.
   projectName: 'mycompany-docs', // Usually your repo name.
-
+  
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -22,7 +22,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/danchanka/mycompany-docs/edit/main/website/',
+          editUrl: 'https://github.com/danchanka/mycompany-docs/edit/master/website/',
+          editLocalizedFiles: true,
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -41,35 +43,38 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'MyCompany',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'MyCompany',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/lsfusion-solutions/mycompany',
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },        
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Site',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'MyCompany website',
+                href: 'https://mycompany.lsfusion.org/',
               },
             ],
           },
@@ -78,15 +83,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://ru.stackoverflow.com/questions/tagged/lsfusion',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Slack',
+                href: 'https://slack.lsfusion.org',
               },
             ],
           },
@@ -94,21 +95,33 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Habr',
+                href: 'https://habr.com/ru/company/lsfusion/blog/',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/lsfusion-solutions/mycompany',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} lsFusion Foundation. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'ru'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      ru: {
+        label: 'Русский',
+      },
+    },  
+  },
 });
