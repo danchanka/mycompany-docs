@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://danchanka.github.io/mycompany-docs/ru/blog"/>
     <subtitle>MyCompany documentation Blog</subtitle>
-    <icon>https://danchanka.github.io/mycompany-docs/ru/img/favicon.ico</icon>
+    <icon>https://danchanka.github.io/mycompany-docs/ru/img/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
