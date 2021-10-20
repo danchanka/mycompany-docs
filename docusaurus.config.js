@@ -13,7 +13,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   favicon: 'img/favicon.ico',
   organizationName: 'danchanka', // Usually your GitHub org/user name.
   projectName: 'mycompany-docs', // Usually your repo name.
-  
+  trailingSlash: true,
+ 
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -22,8 +23,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/danchanka/mycompany-docs/edit/master/website/',
+          editUrl: 'https://github.com/danchanka/mycompany-docs/edit/master/',
           editLocalizedFiles: true,
+          routeBasePath: '/',
           showLastUpdateTime: true,
         },
         blog: {
@@ -46,15 +48,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         title: 'MyCompany',
         logo: {
           alt: 'Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'MyCompany',
-            position: 'left',
-            label: 'Docs',
-          },
           {
             href: 'https://github.com/lsfusion-solutions/mycompany',
             label: 'GitHub',
@@ -70,10 +66,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         style: 'dark',
         links: [
           {
-            title: 'Site',
+            title: 'MyCompany',
             items: [
               {
-                label: 'MyCompany website',
+                label: 'Docs',
+                to: '/',
+              },
+              {
+                label: 'Website',
                 href: 'https://mycompany.lsfusion.org/',
               },
             ],

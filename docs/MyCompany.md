@@ -1,6 +1,7 @@
 ---
 title: 'MyCompany: Overview'
 sidebar_label: Overview
+slug: /
 ---
 
 ### Search

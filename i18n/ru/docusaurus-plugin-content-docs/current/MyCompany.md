@@ -1,6 +1,7 @@
 ---
 title: 'MyCompany: Обзор'
 sidebar_label: Обзор
+slug: /
 ---
 
   
